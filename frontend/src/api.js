@@ -1,5 +1,5 @@
-// Central place for the backend URL — change this one line when you deploy
-const API_BASE = "http://127.0.0.1:8000";
+// Backend URL — Render in production, localhost for local dev
+const API_BASE = import.meta.env.VITE_API_BASE || "https://nt-protected-areas-api.onrender.com";
 
 export async function getBioregions() {
   const res = await fetch(`${API_BASE}/bioregions`);
